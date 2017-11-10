@@ -1,4 +1,4 @@
-# CRM APP
+# APP
 
 ### Development Requirements
 
