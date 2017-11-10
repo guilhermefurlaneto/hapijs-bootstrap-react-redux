@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  crm-db:
+    image: postgres:9.5
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: defuser
+      POSTGRES_PASS: 123456
+      POSTGRES_DB: crm-db
+
+  web:
+    build: .
+    env_file:
+      - local.env
+    command: pm2-dev processes.json
+    depends_on:
+      - crm-db
+    links:
+      - crm-db:crm-db
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3000:3000"

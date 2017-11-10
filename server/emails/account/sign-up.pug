@@ -1,0 +1,18 @@
+doctype strict
+head
+	meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+	meta(name="viewport" content="width=device-width")
+
+body
+	p Olá #{name},
+
+	p Seu usuário foi criado e ativado no sitema CRM.
+
+	p Acesse o sistema através do endereço <a href=#{url}>#{url}</a>, e utilize as seguintes informações para acesso:
+
+	p <strong>E-mail: #{email}</strong>
+
+	p <strong>Senha: #{password}</strong>
+
+	p Atenciosamente,
+	p CRM.
