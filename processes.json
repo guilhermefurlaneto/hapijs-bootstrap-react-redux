@@ -1,6 +1,6 @@
 {
   "apps" : [{
-    "name"        : "crm",
+    "name"        : "Web App",
     "script"      : "./server/index.js",
     "watch"       : ["server"],
     "env": {

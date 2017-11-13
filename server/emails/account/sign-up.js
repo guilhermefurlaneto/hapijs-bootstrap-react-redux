@@ -4,7 +4,7 @@ const pug = require('pug');
 const path = require('path');
 const SES = require('../../lib/aws.ses');
 
-const subject = 'CRM - Confirmação de Cadastro';
+const subject = 'APP - Confirmação de Cadastro';
 
 function send(destination, options) {
   const template = path.join(__dirname, 'sign-up.pug');

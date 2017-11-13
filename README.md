@@ -22,7 +22,7 @@
 
 1. Server and Database:
 - Linux/Mac OS: `$ make compose-server`
-- Windows: `docker-compose up crm-db web`
+- Windows: `docker-compose up postgres web`
 
 It will load the server application on port 3000
 
@@ -39,3 +39,9 @@ It will run webpack development server on port 4000 and will proxy all requests 
 - To migrate up use on the container : `make container-migrate-up`
 
 - To migrate down use on the container : `make container-migrate-down`
+
+#### Migrate using containers
+Make sure that the name of the container of the web app is `hapijsbootstrapreactredux_web_1`. If not please change it on the make command.
+
+- To migrate up: `make container-migrate-up`
+- To migrate down: `make container-migrate-down`

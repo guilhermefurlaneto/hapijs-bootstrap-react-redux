@@ -13,6 +13,9 @@ RUN yarn install
 
 COPY . .
 
+# Uncomment this line to enable automatic migration up
+# RUN export $$(cat local.env) && node_modules/.bin/mariner migrate up
+
 EXPOSE 3000
 
 CMD ["pm2-docker", "processes.json"]

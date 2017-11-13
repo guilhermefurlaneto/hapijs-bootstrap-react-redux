@@ -47,7 +47,7 @@ class NavMenu extends Component {
             <Navbar inverse collapseOnSelect fluid>
                 <Navbar.Header className="text-center">
                     <Navbar.Brand>
-                        <Link to={ this.props.user.isLoggedIn ? '/dashboard' : '/' }>CRM</Link>
+                        <Link to={ this.props.user.isLoggedIn ? '/dashboard' : '/' }>APP</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
